@@ -63,7 +63,7 @@ TastyBites uses CakePHP's Authentication Plugin. To enable authentication:
 ![image](https://github.com/user-attachments/assets/f4e6d5a0-a74c-4c5b-9646-7cced9006319)
 
 ## 📩 Contribution & Contact
-f you have any suggestions or encounter any issues, feel free to submit an issue or reach out:
+if you have any suggestions or encounter any issues, feel free to submit an issue or reach out:
 📧 Email: dongyang.wu0211@gmail.com📷 Instagram: @Tony_Wu
 Enjoy TastyBites and happy shopping! 🎉
 
