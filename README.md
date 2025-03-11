@@ -1,53 +1,71 @@
-# CakePHP Application Skeleton
+# TastyBites 🍽️ - Online Food Photography Store
 
-![Build Status](https://github.com/cakephp/app/actions/workflows/ci.yml/badge.svg?branch=master)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
-[![PHPStan](https://img.shields.io/badge/PHPStan-level%207-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
+TastyBites is an online platform built with CakePHP 5.x that allows users to browse, collect, and purchase high-quality food photography. Whether you're a food blogger, designer, or restaurant owner, you can find stunning images to enhance your content.
 
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 5.x.
+## 🌟 Features
 
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
+📷 Photo Showcase - Browse and search for high-quality food photography.
 
-## Installation
+🛒 Shopping Cart - Add photos to your cart and proceed to checkout.
 
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
+🔒 User Authentication - Secure login, registration, and password recovery.
 
-If Composer is installed globally, run
+💳 Payment Integration - Supports PayPal and credit card payments.
 
-```bash
-composer create-project --prefer-dist cakephp/app
-```
+🗄️ Database Management - MySQL-based database with structured data models.
 
-In case you want to use a custom app dir name (e.g. `/myapp/`):
 
-```bash
-composer create-project --prefer-dist cakephp/app myapp
-```
+## 🛠️ Installation Guide
 
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
+1️⃣ Clone the Repository
+git clone https://github.com/TonyWu0211/TastyBitesWebsite.git
+cd TastyBitesWebsite
 
-```bash
-bin/cake server -p 8765
-```
+2️⃣ Install Dependencies
+composer install
 
-Then visit `http://localhost:8765` to see the welcome page.
+3️⃣ Configure the Database
+1.Create a new database in MySQL: CREATE DATABASE tastybites;
 
-## Update
+2.Import the tastybites.sql database file: mysql -u root -p tastybites < tastybites.sql
 
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
+3.Update config/app_local.php with your database credentials:
+'Datasources' => [
+    'default' => [
+        'host' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'tastybites',
+    ]
+];
 
-## Configuration
+4️⃣ Run the Application
 
-Read and edit the environment specific `config/app_local.php` and set up the
-`'Datasources'` and any other configuration relevant for your application.
-Other environment agnostic settings can be changed in `config/app.php`.
+"bin/cake server -p 8765",Then open http://localhost:8765 in your browser.
 
-## Layout
 
-The app skeleton uses [Milligram](https://milligram.io/) (v1.3) minimalist CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
+
+
+## 🏗️ User Authentication
+
+TastyBites uses CakePHP's Authentication Plugin. To enable authentication:
+
+1.Install the authentication plugin:
+  composer require cakephp/authentication
+
+2.Load the plugin in src/Application.php:
+ $this->addPlugin('Authentication');
+
+3.Configure authentication in config/app.php.
+
+## 🖼️ Screenshots!
+![image](https://github.com/user-attachments/assets/09e8fcbd-d00b-48d4-8c8a-e179ffcd2db6)
+![image](https://github.com/user-attachments/assets/f4e6d5a0-a74c-4c5b-9646-7cced9006319)
+
+## 📩 Contribution & Contact
+f you have any suggestions or encounter any issues, feel free to submit an issue or reach out:
+📧 Email: dongyang.wu0211@gmail.com📷 Instagram: @Tony_Wu
+Enjoy TastyBites and happy shopping! 🎉
+
+
+
